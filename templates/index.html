@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block body %}
+<body>
+    <div class="position-absolute h-100 w-100 m-0 d-flex align-items-center justify-content-center">
+        <div class="d-grid gap-2">
+            <h1>{{title}}</h1>
+                <form method="post" action="{{ url_for('result') }}">
+                    <label for="select">今の気分は？</label>
+                    <select id="select" name="select">
+                        {% for option in options %}
+                        <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                </form>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
+
