@@ -9,7 +9,7 @@ bootstrap = Bootstrap(app)
 def index():
     # セレクトボックスの選択肢
     options = ['dance', 'positive', 'study', 'driving']
-    return render_template('index.html', options=options,title="卒業制作")
+    return render_template('index.html', options=options,title="プレイリストを作ります！")
 
 @app.route('/result.html', methods=["POST"])
 def result():
