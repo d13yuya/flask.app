@@ -26,12 +26,14 @@
 
 {% block body %}
 <body>
-    <h1>おすすめプレイリスト</h1>
-    {% if tables %}
-    {% for table in tables %}
-    {{ table|safe }}
-    {% endfor %}
-    {% endif %}
-    <a href="/" class="btn btn-dark">戻る</a>
+    <div class="position-absolute top-0 start-0">
+        <h1>おすすめプレイリスト</h1>
+        {% if tables %}
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}
+        {% endif %}
+        <a href="/" class="btn btn-dark">戻る</a>
+    </div>
 </body>
 {% endblock %}
